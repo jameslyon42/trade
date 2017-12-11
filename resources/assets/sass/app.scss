@@ -1,9 +1,69 @@
-
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 // Variables
 @import "variables";
 
-// Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+* {
+	font-family: $font-stack;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+header.main-header {
+	background: $header-color;
+	height: $header-height;
+	padding: 0 20px;
+	position: relative;
+
+	.header-title {
+		line-height: $header-height;
+	}
+
+	a {
+		color: #fff;
+		text-decoration: none;
+	}
+
+	ul {
+		list-style-type: none;
+		padding: 0;
+	}
+
+	.auth-links {
+		background: $header-color;
+		float: right;
+		margin: 0;
+
+		>li {
+			display: inline-block;
+		}
+
+		>li:not(:last-child) {
+			margin-right: 10px;
+		}
+
+		a {
+			line-height: $header-height;
+			padding: 0 15px;
+		}
+
+		.auth-drop {
+			text-align: right;
+
+			.auth-menu {
+				display: none;
+			}
+
+			&:hover {
+				.auth-menu {
+					display: block;
+				}
+
+			}
+		}
+	}
+}
