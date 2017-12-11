@@ -11,12 +11,52 @@ body {
 header.main-header {
   background: #333;
   height: 40px;
-  line-height: 40px;
   padding: 0 20px;
+  position: relative;
+}
+
+header.main-header .header-title {
+  line-height: 40px;
 }
 
 header.main-header a {
   color: #fff;
   text-decoration: none;
+}
+
+header.main-header ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+header.main-header .auth-links {
+  background: #333;
+  float: right;
+  margin: 0;
+}
+
+header.main-header .auth-links > li {
+  display: inline-block;
+}
+
+header.main-header .auth-links > li:not(:last-child) {
+  margin-right: 10px;
+}
+
+header.main-header .auth-links a {
+  line-height: 40px;
+  padding: 0 15px;
+}
+
+header.main-header .auth-links .auth-drop {
+  text-align: right;
+}
+
+header.main-header .auth-links .auth-drop .auth-menu {
+  display: none;
+}
+
+header.main-header .auth-links .auth-drop:hover .auth-menu {
+  display: block;
 }
 

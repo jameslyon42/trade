@@ -15,16 +15,55 @@ body {
 
 header.main-header {
 	background: $header-color;
-	
 	height: $header-height;
-	line-height: $header-height;
 	padding: 0 20px;
-		
-	.header-title {
+	position: relative;
 
+	.header-title {
+		line-height: $header-height;
 	}
+
 	a {
 		color: #fff;
 		text-decoration: none;
+	}
+
+	ul {
+		list-style-type: none;
+		padding: 0;
+	}
+
+	.auth-links {
+		background: $header-color;
+		float: right;
+		margin: 0;
+
+		>li {
+			display: inline-block;
+		}
+
+		>li:not(:last-child) {
+			margin-right: 10px;
+		}
+
+		a {
+			line-height: $header-height;
+			padding: 0 15px;
+		}
+
+		.auth-drop {
+			text-align: right;
+
+			.auth-menu {
+				display: none;
+			}
+
+			&:hover {
+				.auth-menu {
+					display: block;
+				}
+
+			}
+		}
 	}
 }
