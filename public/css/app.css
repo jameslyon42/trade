@@ -14,7 +14,7 @@ body {
   left: -19%;
   margin-top: 300px;
   text-align: left;
-  border: 3px solid green;
+  padding-left: 163px;
 }
 
 .panel-body {
@@ -28,7 +28,7 @@ body {
     left: -42%;
     margin-top: 300px;
     text-align: left;
-    border: 3px solid green;
+    padding-left: 163px;
   }
 }
 
