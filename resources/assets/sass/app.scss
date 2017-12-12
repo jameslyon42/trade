@@ -13,6 +13,30 @@ body {
 	padding: 0;
 }
 
+.container {
+	float: right;
+	position: relative;
+	left: -19%;
+	margin-top:300px;
+	text-align: left;
+	border: 3px solid green;
+}
+
+.panel-body {
+	margin-top:10px;
+}
+
+@media screen and (min-width: 680px) {
+	.container {
+	float: right;
+	position: relative;
+	left: -42%;
+	margin-top:300px;
+	text-align: left;
+	border: 3px solid green;
+}
+}
+
 header.main-header {
 	background: $header-color;
 	height: $header-height;
