@@ -6,29 +6,41 @@ html,
 body {
   margin: 0;
   padding: 0;
+  background-image: url("/images/stockmarketticker2.png");
+  background-size: auto auto;
+  background-size: cover !important;
 }
 
 .container {
-  float: right;
-  position: relative;
-  left: -19%;
-  margin-top: 300px;
-  text-align: left;
-  padding-left: 163px;
+  /*float: right;
+	position: relative;
+	left: -3%;
+	margin: 200px 25% 0 auto;
+	text-align: left;
+	padding-left: 163px;*/
 }
 
-.panel-body {
-  margin-top: 10px;
+.panel {
+  background-color: #fff;
+  color: grey;
+  position: fixed;
+  top: 40%;
+  left: 27%;
+  padding: 20px;
 }
 
-@media screen and (min-width: 680px) {
-  .container {
-    float: right;
-    position: relative;
-    left: -42%;
-    margin-top: 300px;
-    text-align: left;
-    padding-left: 163px;
+.panel a {
+  color: grey;
+}
+
+@media screen and (min-width: 480px) {
+  .panel {
+    background-color: #fff;
+    color: grey;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    padding: 20px;
   }
 }
 
