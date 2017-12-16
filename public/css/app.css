@@ -7,8 +7,7 @@ body {
   margin: 0;
   padding: 0;
   background-image: url("/images/stockmarketticker2.png");
-  background-size: auto auto;
-  background-size: cover !important;
+  background-size: 35%;
 }
 
 .container {
