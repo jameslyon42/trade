@@ -21,13 +21,13 @@ body {
 }
 
 .panel {
-    background-color: #fff;
-    color: grey;
-    position: fixed;
-    top: 40%;
-    left: 42%;
-    padding: 20px;
-  }
+  background-color: #fff;
+  color: grey;
+  position: fixed;
+  top: 40%;
+  left: 45%;
+  padding: 20px;
+}
 
 .panel a {
   color: grey;
@@ -39,7 +39,7 @@ body {
     color: grey;
     position: fixed;
     top: 40%;
-    left: 30%;
+    left: 25%;
     padding: 20px;
   }
 }

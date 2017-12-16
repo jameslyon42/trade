@@ -42709,7 +42709,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\ExampleComponent.vue"
+Component.options.__file = "resources/assets/js/components/ExampleComponent.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
 
 /* hot reload */
@@ -42719,9 +42719,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-0ca92eac", Component.options)
+    hotAPI.createRecord("data-v-7168fb6a", Component.options)
   } else {
-    hotAPI.reload("data-v-0ca92eac", Component.options)
+    hotAPI.reload("data-v-7168fb6a", Component.options)
 ' + '  }
   module.hot.dispose(function (data) {
     disposed = true
@@ -42908,7 +42908,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-0ca92eac", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-7168fb6a", module.exports)
   }
 }
 
@@ -42916,7 +42916,7 @@ if (false) {
 /* 42 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: ModuleBuildError: Module build failed: Error: ENOENT: no such file or directory, scandir 'C:\\trade\\node_modules\\node-sass\\vendor'\n   at fs.readdirSync (fs.js:911:3)\n   at getInstalledBinaries (C:\\trade\\node_modules\\node-sass\\lib\\extensions.js:128:3)\n   at foundBinariesList (C:\\trade\\node_modules\\node-sass\\lib\\errors.js:20:3)\n   at foundBinaries (C:\\trade\\node_modules\\node-sass\\lib\\errors.js:13:3)\n   at module.exports.missingBinary (C:\\trade\\node_modules\\node-sass\\lib\\errors.js:41:3)\n   at module.exports (C:\\trade\\node_modules\\node-sass\\lib\\binding.js:15:7)\n   at Anonymous function (C:\\trade\\node_modules\\node-sass\\lib\\index.js:14:1)\n   at Module.prototype._compile (module.js:624:5)\n   at Module._extensions[.js] (module.js:635:3)\n   at Module.prototype.load (module.js:545:3)\n   at tryModuleLoad (module.js:508:5)\n   at Module._load (module.js:500:3)\n   at Module.prototype.require (module.js:568:3)\n   at require (internal/module.js:11:7)\n   at Anonymous function (C:\\trade\\node_modules\\sass-loader\\lib\\loader.js:3:1)\n   at Module.prototype._compile (module.js:624:5)\n   at Module._extensions[.js] (module.js:635:3)\n   at Module.prototype.load (module.js:545:3)\n   at tryModuleLoad (module.js:508:5)\n   at Module._load (module.js:500:3)\n   at Module.prototype.require (module.js:568:3)\n   at require (internal/module.js:11:7)\n   at loadLoader (C:\\trade\\node_modules\\loader-runner\\lib\\loadLoader.js:13:4)\n   at iteratePitchingLoaders (C:\\trade\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n   at iteratePitchingLoaders (C:\\trade\\node_modules\\loader-runner\\lib\\LoaderRunner.js:165:3)\n   at Anonymous function (C:\\trade\\node_modules\\loader-runner\\lib\\LoaderRunner.js:173:11)\n   at loadLoader (C:\\trade\\node_modules\\loader-runner\\lib\\loadLoader.js:36:3)\n   at iteratePitchingLoaders (C:\\trade\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n   at iteratePitchingLoaders (C:\\trade\\node_modules\\loader-runner\\lib\\LoaderRunner.js:165:3)\n   at Anonymous function (C:\\trade\\node_modules\\loader-runner\\lib\\LoaderRunner.js:173:11)\n   at loadLoader (C:\\trade\\node_modules\\loader-runner\\lib\\loadLoader.js:36:3)\n   at iteratePitchingLoaders (C:\\trade\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n   at iteratePitchingLoaders (C:\\trade\\node_modules\\loader-runner\\lib\\LoaderRunner.js:165:3)\n   at Anonymous function (C:\\trade\\node_modules\\loader-runner\\lib\\LoaderRunner.js:173:11)\n   at loadLoader (C:\\trade\\node_modules\\loader-runner\\lib\\loadLoader.js:36:3)\n   at iteratePitchingLoaders (C:\\trade\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n   at Anonymous function (C:\\trade\\node_modules\\webpack\\lib\\NormalModule.js:195:5)\n   at Anonymous function (C:\\trade\\node_modules\\loader-runner\\lib\\LoaderRunner.js:364:4)\n   at Anonymous function (C:\\trade\\node_modules\\loader-runner\\lib\\LoaderRunner.js:170:11)\n   at loadLoader (C:\\trade\\node_modules\\loader-runner\\lib\\loadLoader.js:27:4)\n   at iteratePitchingLoaders (C:\\trade\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n   at iteratePitchingLoaders (C:\\trade\\node_modules\\loader-runner\\lib\\LoaderRunner.js:165:3)\n   at Anonymous function (C:\\trade\\node_modules\\loader-runner\\lib\\LoaderRunner.js:173:11)\n   at loadLoader (C:\\trade\\node_modules\\loader-runner\\lib\\loadLoader.js:36:3)\n   at iteratePitchingLoaders (C:\\trade\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n   at iteratePitchingLoaders (C:\\trade\\node_modules\\loader-runner\\lib\\LoaderRunner.js:165:3)\n   at Anonymous function (C:\\trade\\node_modules\\loader-runner\\lib\\LoaderRunner.js:173:11)\n   at loadLoader (C:\\trade\\node_modules\\loader-runner\\lib\\loadLoader.js:36:3)\n   at iteratePitchingLoaders (C:\\trade\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n   at iteratePitchingLoaders (C:\\trade\\node_modules\\loader-runner\\lib\\LoaderRunner.js:165:3)\n   at Anonymous function (C:\\trade\\node_modules\\loader-runner\\lib\\LoaderRunner.js:173:11)\n   at loadLoader (C:\\trade\\node_modules\\loader-runner\\lib\\loadLoader.js:36:3)\n   at iteratePitchingLoaders (C:\\trade\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n   at runLoaders (C:\\trade\\node_modules\\loader-runner\\lib\\LoaderRunner.js:362:2)\n   at NormalModule.prototype.doBuild (C:\\trade\\node_modules\\webpack\\lib\\NormalModule.js:182:3)\n   at NormalModule.prototype.build (C:\\trade\\node_modules\\webpack\\lib\\NormalModule.js:275:3)\n   at Compilation.prototype.buildModule (C:\\trade\\node_modules\\webpack\\lib\\Compilation.js:151:3)\n   at Anonymous function (C:\\trade\\node_modules\\webpack\\lib\\Compilation.js:456:5)\n   at Anonymous function (C:\\trade\\node_modules\\webpack\\lib\\NormalModuleFactory.js:241:5)\n   at Anonymous function (C:\\trade\\node_modules\\webpack\\lib\\NormalModuleFactory.js:94:6)\n   at Anonymous function (C:\\trade\\node_modules\\tapable\\lib\\Tapable.js:268:4)\n   at Anonymous function (C:\\trade\\node_modules\\webpack\\lib\\CompatibilityPlugin.js:52:5)\n   at applyPluginsAsyncWaterfall (C:\\trade\\node_modules\\tapable\\lib\\Tapable.js:272:2)\n   at Anonymous function (C:\\trade\\node_modules\\webpack\\lib\\NormalModuleFactory.js:69:5)\n   at Anonymous function (C:\\trade\\node_modules\\webpack\\lib\\NormalModuleFactory.js:194:7)\n   at _combinedTickCallback (internal/process/next_tick.js:130:5)\n   at _tickCallback (internal/process/next_tick.js:180:9)");
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
