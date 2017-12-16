@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Trade;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,6 +10,6 @@ class Security extends Model
     protected $guarded = [];
 
     public function prices() {
-    	return $this->hasMany('App\Price');
+    	return $this->hasMany('Trade\Price');
     }
 }

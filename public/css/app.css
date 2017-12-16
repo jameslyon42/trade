@@ -21,25 +21,36 @@ body {
 }
 
 .panel {
-  background-color: #fff;
-  color: grey;
-  position: fixed;
-  top: 40%;
-  left: 27%;
-  padding: 20px;
-}
+    background-color: #fff;
+    color: grey;
+    position: fixed;
+    top: 40%;
+    left: 42%;
+    padding: 20px;
+  }
 
 .panel a {
   color: grey;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 480px) {
   .panel {
     background-color: #fff;
     color: grey;
     position: fixed;
     top: 40%;
-    left: 50%;
+    left: 30%;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .panel {
+    background-color: #fff;
+    color: grey;
+    position: fixed;
+    top: 40%;
+    left: 14%;
     padding: 20px;
   }
 }

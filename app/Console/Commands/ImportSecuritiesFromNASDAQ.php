@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Console\Commands;
+namespace Trade\Console\Commands;
 
 use Illuminate\Console\Command;
 use Storage;
-use App\Security;
+use Trade\Security;
 
 class ImportSecuritiesFromNASDAQ extends Command
 {

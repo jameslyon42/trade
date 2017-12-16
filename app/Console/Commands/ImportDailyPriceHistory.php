@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Console\Commands;
+namespace Trade\Console\Commands;
 
 use Illuminate\Console\Command;
-use App\PriceHistoryService;
-use App\Security;
+use Trade\PriceHistoryService;
+use Trade\Security;
 use Exception;
 
 class ImportDailyPriceHistory extends Command
