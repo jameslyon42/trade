@@ -14,11 +14,13 @@
         <style>
             html, body {
                 background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
+                color: #fff;
+                font-family: $font-stack;
                 font-weight: 100;
                 height: 100vh;
-                margin: 0;
+                padding: 0;
+                background-image: url("/images/stockmarketticker2.png");
+                background-size: 35%;
             }
 
             .full-height {
@@ -46,11 +48,15 @@
             }
 
             .title {
+                background-color: grey;
+                border: 4px solid;
                 font-size: 84px;
             }
 
             .links > a {
-                color: #636b6f;
+                background-color: grey;
+                border: 1px solid white;
+                color: white;
                 padding: 0 25px;
                 font-size: 12px;
                 font-weight: 600;
