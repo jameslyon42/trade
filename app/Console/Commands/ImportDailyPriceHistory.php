@@ -45,7 +45,7 @@ class ImportDailyPriceHistory extends Command
         $securities->each(function ($security) {
             $this->line($security->symbol . ': Getting Data');
             try {
-                $price_history = PriceHistoryService::getDailyPriceHistory($security['symbol'], 'full');   
+                $price_history = PriceHistoryService::getDailyPriceHistory($security['symbol'], 'compact');
                 
                 if (!$price_history) {
                     throw new Exception("no data", 1);
