@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 
 // Variables
 @import "variables";
@@ -12,6 +12,10 @@ body {
 	margin: 0;
 	padding: 0;
 }
+
+/*
+*	Layout
+*/
 
 header.main-header {
 	background: $header-color;
@@ -67,3 +71,44 @@ header.main-header {
 		}
 	}
 }
+
+/*
+*	Security Section
+*/
+
+.main-container {
+	padding: 15px;
+}
+
+/*
+*	Security Search	
+*/
+
+.search-container {
+	input[name=search_text] {
+		box-sizing: border-box;
+		font-size: 24px;
+		padding: 5px;
+		width: 100%;
+
+		&:focus {
+			outline: none;
+		}
+	}
+	.search-results {
+		border: solid 1px #333;
+		border-top: none;
+		.search-result {
+			cursor: pointer;
+			font-size: 20px;
+			padding: 5px;
+			&:hover {
+				background: #DDD;
+			}
+		}
+	}
+}
+
+
+
+
