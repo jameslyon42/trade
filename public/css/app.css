@@ -103,3 +103,13 @@ header.main-header .auth-links .auth-drop:hover .auth-menu {
   background: #DDD;
 }
 
+/*
+*	Security History Graph
+*/
+
+.security-history-graph {
+  height: 600px;
+  margin-top: 15px;
+  position: relative;
+}
+

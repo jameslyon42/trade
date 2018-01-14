@@ -21,6 +21,8 @@
         "vue": "^2.5.13"
     },
     "dependencies": {
+        "chart.js": "^2.7.1",
+        "moment": "^2.20.1",
         "vue-template-compiler": "^2.5.13"
     }
 }
