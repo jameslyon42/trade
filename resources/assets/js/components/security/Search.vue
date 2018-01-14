@@ -43,8 +43,7 @@
                     }
                 })
 				.then(function (response) {
-					const securities = response.data;
-					self.securities = securities
+					self.securities = response.data;
 				});
             },
             highlightSearch: function (value, searchText) {
@@ -61,9 +60,6 @@
 			    this.$refs.input.value = security.id;
 			    this.$emit('input', security.id);
 			}
-		},
-        filters: {
-
-        }
+		}
 	}
 </script>
