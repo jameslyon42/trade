@@ -77342,7 +77342,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     yAxes: [{
                         ticks: {
                             callback: function callback(value) {
-                                return '$' + value;
+                                return '$' + value.toFixed(2);
                             }
                         }
                     }]

@@ -45,7 +45,7 @@
                         yAxes: [{
                             ticks: {
                                 callback: function (value) {
-                                    return '$' + value;
+                                    return '$' + value.toFixed(2);
                                 }
                             }
                         }]
