@@ -102,9 +102,12 @@ header.main-header {
 			cursor: pointer;
 			font-size: 20px;
 			padding: 5px;
+
+			&.highlighted,
 			&:hover {
 				background: #DDD;
 			}
+
 		}
 	}
 }

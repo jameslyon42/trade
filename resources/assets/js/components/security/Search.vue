@@ -9,14 +9,18 @@
 			placeholder="Search for shit here..."
 			v-model="searchText"
 			v-on:input="search"
+			v-on:keyup.down.up="highlight($event)"
+			v-on:keyup.enter="selectHighlighted"
+			v-on:focus="selectAllText($event.target)"
 		>
 		<div class="search-results"
 			 v-if='securities'
 		>
 			<div class="search-result"
-				 v-for="security in securities"
+				 v-for="(security, index) in securities"
 				 v-html='highlightSearch(security.symbol + " - " + security.name, searchText)'
 				 v-on:click="select(security)"
+				 v-bind:class="[security.highlighted ? 'highlighted' : '']"
 			>
 			</div>
 		</div>
@@ -28,7 +32,8 @@
 		data: function () {
 			return {
 				searchText: '',
-				securities: false
+				securities: false,
+				currentHighlightedIndex: false
 			}
 		},
 		props: [
@@ -43,6 +48,7 @@
                     }
                 })
 				.then(function (response) {
+                    self.currentHighlightedIndex = false;
 					self.securities = response.data;
 				});
             },
@@ -59,7 +65,36 @@
 				this.securities = false;
 			    this.$refs.input.value = security.id;
 			    this.$emit('input', security.id);
-			}
+			},
+			selectHighlighted: function () {
+			  if (this.currentHighlightedIndex !== false) {
+			      this.select(this.securities[this.currentHighlightedIndex]);
+			  }
+			},
+            highlight: function (event) {
+			    const change = (event.key === 'ArrowUp') ? -1 : 1;
+
+			    if (!this.securities) {
+			        return;
+				}
+			    if (this.currentHighlightedIndex === false) {
+			        if (change === 1) {
+                        this.currentHighlightedIndex = 0;
+                    }
+				} else {
+			        this.$set(this.securities[this.currentHighlightedIndex], 'highlighted', false);
+
+                    if (this.securities[this.currentHighlightedIndex + change]) {
+                        this.currentHighlightedIndex += change;
+                    }
+                }
+
+                this.$set(this.securities[this.currentHighlightedIndex], 'highlighted', true);
+			},
+			selectAllText: function (elm) {
+                elm.setSelectionRange(0, elm.value.length)
+            }
+
 		}
 	}
 </script>

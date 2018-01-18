@@ -99,6 +99,7 @@ header.main-header .auth-links .auth-drop:hover .auth-menu {
   padding: 5px;
 }
 
+.search-container .search-results .search-result.highlighted,
 .search-container .search-results .search-result:hover {
   background: #DDD;
 }
