@@ -77065,12 +77065,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 	data: function data() {
 		return {
 			searchText: '',
-			securities: false
+			securities: false,
+			currentHighlightedIndex: false
 		};
 	},
 	props: ['value'],
@@ -77082,6 +77087,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 					search_text: this.searchText
 				}
 			}).then(function (response) {
+				self.currentHighlightedIndex = false;
 				self.securities = response.data;
 			});
 		},
@@ -77098,7 +77104,36 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			this.securities = false;
 			this.$refs.input.value = security.id;
 			this.$emit('input', security.id);
+		},
+		selectHighlighted: function selectHighlighted() {
+			if (this.currentHighlightedIndex !== false) {
+				this.select(this.securities[this.currentHighlightedIndex]);
+			}
+		},
+		highlight: function highlight(event) {
+			var change = event.key === 'ArrowUp' ? -1 : 1;
+
+			if (!this.securities) {
+				return;
+			}
+			if (this.currentHighlightedIndex === false) {
+				if (change === 1) {
+					this.currentHighlightedIndex = 0;
+				}
+			} else {
+				this.$set(this.securities[this.currentHighlightedIndex], 'highlighted', false);
+
+				if (this.securities[this.currentHighlightedIndex + change]) {
+					this.currentHighlightedIndex += change;
+				}
+			}
+
+			this.$set(this.securities[this.currentHighlightedIndex], 'highlighted', true);
+		},
+		selectAllText: function selectAllText(elm) {
+			elm.setSelectionRange(0, elm.value.length);
 		}
+
 	}
 });
 
@@ -77142,7 +77177,31 @@ var render = function() {
               _vm.searchText = $event.target.value
             },
             _vm.search
-          ]
+          ],
+          keyup: [
+            function($event) {
+              if (
+                !("button" in $event) &&
+                _vm._k($event.keyCode, "down", 40, $event.key) &&
+                _vm._k($event.keyCode, "up", 38, $event.key)
+              ) {
+                return null
+              }
+              _vm.highlight($event)
+            },
+            function($event) {
+              if (
+                !("button" in $event) &&
+                _vm._k($event.keyCode, "enter", 13, $event.key)
+              ) {
+                return null
+              }
+              _vm.selectHighlighted($event)
+            }
+          ],
+          focus: function($event) {
+            _vm.selectAllText($event.target)
+          }
         }
       }),
       _vm._v(" "),
@@ -77150,9 +77209,10 @@ var render = function() {
         ? _c(
             "div",
             { staticClass: "search-results" },
-            _vm._l(_vm.securities, function(security) {
+            _vm._l(_vm.securities, function(security, index) {
               return _c("div", {
                 staticClass: "search-result",
+                class: [security.highlighted ? "highlighted" : ""],
                 domProps: {
                   innerHTML: _vm._s(
                     _vm.highlightSearch(
