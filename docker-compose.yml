@@ -1,0 +1,18 @@
+version: "3"
+services:
+  web:
+    image: jameslyon42/web
+    container_name: gof_web
+    ports: 
+      - "80:80"
+    volumes:
+      - ./:/var/www/site
+  db:
+    image: percona
+    container_name: gof_db
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: asdfasdf
