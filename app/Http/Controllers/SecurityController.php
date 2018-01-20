@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Security;
+use App\Models\Entities\Security;
 use DateTime;
 use Illuminate\Support\Facades\DB;
 

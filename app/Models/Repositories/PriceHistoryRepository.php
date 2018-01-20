@@ -1,8 +1,8 @@
 <?php
 
-namespace App;
+namespace App\Models\Repositories;
 
-class PriceHistoryService 
+class PriceHistoryRepository
 {
 	
 	protected static $base_url = 'https://www.alphavantage.co/';

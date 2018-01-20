@@ -3,8 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use Storage;
-use App\Security;
+use App\Models\Entities\Security;
 
 class ImportSecuritiesFromNASDAQ extends Command
 {

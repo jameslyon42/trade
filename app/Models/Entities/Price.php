@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,6 +11,6 @@ class Price extends Model
     protected $dates = ['timestamp'];
 
     public function security() {
-    	return $this->belongsTo('App\Security');
+    	return $this->belongsTo('App\Models\Entities\Security');
     }
 }
