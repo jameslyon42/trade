@@ -3,8 +3,8 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use App\PriceHistoryService;
-use App\Security;
+use App\Models\Repositories\PriceHistoryRepository;
+use App\Models\Entities\Security;
 use Exception;
 
 class ImportDailyPriceHistory extends Command
@@ -45,7 +45,7 @@ class ImportDailyPriceHistory extends Command
         $securities->each(function ($security) {
             $this->line($security->symbol . ': Getting Data');
             try {
-                $price_history = PriceHistoryService::getDailyPriceHistory($security['symbol'], 'compact');
+                $price_history = PriceHistoryRepository::getDailyPriceHistory($security['symbol'], 'compact');
                 
                 if (!$price_history) {
                     throw new Exception("no data", 1);
