@@ -4,13 +4,12 @@ namespace App\Models\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Security extends Model
+class Portfolio extends Model
 {
-    public $timestamps = false;
     protected $guarded = [];
 
-    public function prices() {
-    	return $this->hasMany('App\Models\Entities\Price');
+    public function user() {
+        return $this->belongsTo('App\Models\Entities\User');
     }
 
     public function positions() {

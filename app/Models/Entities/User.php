@@ -26,4 +26,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function portfolios() {
+        return $this->hasMany('App\Models\Entities\Portfolio');
+    }
 }
