@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use App\Models\Services\BacktestService;
+use App\Models\Repositories\UserRepository;
 
 class TraderTest extends Command
 {
@@ -42,6 +43,7 @@ class TraderTest extends Command
      */
     public function handle()
     {
-        $this->backtestService->run(1, 'MeanTrader');
+
+        $this->backtestService->run(1, 'MeanTrader', 1);
     }
 }
